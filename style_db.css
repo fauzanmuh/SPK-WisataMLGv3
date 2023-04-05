@@ -1,0 +1,9 @@
+.hasil_btn {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hasil_btn {
+        margin-top: 0;
+    }
+}
