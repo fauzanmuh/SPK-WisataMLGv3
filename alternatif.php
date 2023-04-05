@@ -11,16 +11,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>SPK Destinasi Wisata Metode Fuzzy Database</title>
+<title>Database SPK Pemilihan Objek Wisata Malang Raya</title>
 <style type="text/css">
 <!--
 body,td,th {
 	font-family: Georgia, Times New Roman, Times, serif;
 	font-size: 13px;
-	color: #333333;
+	color: #008B8B;
 }
 .style1 {
-	color: #000099;
+	color: #556B2F;
 	font-size: 24px;
 }
 a:link {
@@ -44,23 +44,23 @@ a:active {
 </style></head>
 
 <body>
-<table width="1000" border="0" align="center" cellpadding="7" cellspacing="1" bgcolor="#000099">
+<table width="1000" border="0" align="center" cellpadding="7" cellspacing="1" bgcolor="#FFFFF0">
   <tr>
-    <td height="50" bgcolor="#FFFFFF" align="center"><span class="style1">SPK Destinasi Wisata Metode Fuzzy Database</span></td>
+    <td height="50" bgcolor="#F0F8FF" align="center"><span class="style1">Database SPK Pemilihan Objek Wisata Malang Raya</span></td>
   </tr>
   <tr>
-    <td height="35" bgcolor="#FFFFFF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Alternatif</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="logout.php">Logout</a></span></td>
+    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Alternatif</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="logout.php">Logout</a></span></td>
   </tr>
   <tr>
-    <td align="center" valign="top" bgcolor="#FFFFFF"><br />
+    <td align="center" valign="top" bgcolor="#F0FFFF"><br />
       <strong>Data Alternatif</strong><br />
       <br />
       <table width="700" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
         <tr>
-          <td width="115" bgcolor="#FFFFFF">ID Alternatif</td>
-          <td width="202" bgcolor="#FFFFFF">Nama Alternatif Wisata</td>
-          <td width="261" bgcolor="#FFFFFF">Deskripsi</td>
-          <td width="77" bgcolor="#FFFFFF"><a href="add-alternatif.php">Add</a></td>
+          <td width="115" bgcolor="#FFFFFF" align="center">ID Alternatif</td>
+          <td width="202" bgcolor="#FFFFFF" align="center">Nama Alternatif Wisata</td>
+          <td width="261" bgcolor="#FFFFFF" align="center">Deskripsi</td>
+          <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-alternatif.php">Tambah</a></td>
         </tr>
         <?php
 			$queryalternatif = mysqli_query($db, "SELECT * FROM alternatif ORDER BY id_alternatif");
@@ -68,10 +68,11 @@ a:active {
 			{
 		?>
         <tr>
-          <td bgcolor="#FFFFFF"><?php echo $dataalternatif['id_alternatif']; ?></td>
+          <td bgcolor="#FFFFFF" align="center"><?php echo $dataalternatif['id_alternatif']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $dataalternatif['nama_alternatif']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $dataalternatif['deskripsi']; ?></td>
-          <td bgcolor="#FFFFFF"><a href="edit-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Edit</a> <a href="del-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Del</a></td>
+          <td bgcolor="#FFFFFF"><a href="edit-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Edit</a> 
+          <a href="del-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Hapus</a></td>
         </tr>
         <?php
 			}
@@ -81,10 +82,10 @@ a:active {
     <br /></td>
   </tr>
   <tr>
-    <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <td bgcolor="#F0F8FF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
-      <td width="47%" height="35" align="left"><strong>&copy; Kelompok 5</strong></td>
-        <td width="53%" height="35" align="right"><strong> Logika Informatika 2021</td>
+      <td width="47%" height="35" align="left"><strong>&copy; Muhammad Fauzan</strong></td>
+        <td width="53%" height="35" align="right"><strong> POLINEMA 2023</td>
       </tr>
     </table></td>
   </tr>

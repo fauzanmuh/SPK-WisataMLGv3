@@ -51,11 +51,11 @@
         <ul class="navbar-nav ms-auto">
         </li>
           <li class="nav-item">
-            <a href="fuzzy-database-php-mysql.php" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
+            <a href="#" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
               Cek Lokasi
             </a>
           <li class="nav-item">
-            <a href="fuzzy-database-php-mysql.php" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
+            <a href="#" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
               Cari Wisata
             </a>
           </li>
@@ -73,7 +73,7 @@
       <div class="flex-item-left">
         <h1 class="display-3"><strong><strong>Uklam-Uklam</strong></strong></h1>
         <label class="home_subtitle mt-1 text-muted">Uklam-Uklam merupakan sistem pendukung keputusan pemilihan destinasi wisata di kawasan Malang Raya. Yuk Cari destinasi wisata mu disini berdasarkan kriteria kamu inginkan!</label> <br>
-        <a href="fuzzy-database-php-mysql.php" class="btn text-decoration-none rounded btn-primary mt-3 py-3">
+        <a href="#" class="btn text-decoration-none rounded btn-primary mt-3 py-3">
           Cari Wisata &nbsp;<i class="uil uil-location-arrow button_icon"></i>
         </a>
       </div>

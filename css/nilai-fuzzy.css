@@ -1,0 +1,26 @@
+body,td,th {
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 13px;
+	color: #333333;
+}
+.style1 {
+	color: #000099;
+	font-size: 24px;
+}
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FF0000;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+.style2 {font-weight: bold}
