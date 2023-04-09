@@ -49,16 +49,16 @@ a:active {
     <td height="50" bgcolor="#F0F8FF" align="center"><span class="style1">Database SPK Pemilihan Objek Wisata Malang Raya</span></td>
   </tr>
   <tr>
-    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Alternatif</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="logout.php">Logout</a></span></td>
+    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="logout.php">Logout</a></span></td>
   </tr>
   <tr>
     <td align="center" valign="top" bgcolor="#F0FFFF"><br />
-      <strong>Data Alternatif</strong><br />
+      <strong>Data Wisata</strong><br />
       <br />
       <table width="700" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
         <tr>
-          <td width="115" bgcolor="#FFFFFF" align="center">ID Alternatif</td>
-          <td width="202" bgcolor="#FFFFFF" align="center">Nama Alternatif Wisata</td>
+          <td width="115" bgcolor="#FFFFFF" align="center">ID Wisata</td>
+          <td width="202" bgcolor="#FFFFFF" align="center">Nama Wisata</td>
           <td width="261" bgcolor="#FFFFFF" align="center">Deskripsi</td>
           <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-alternatif.php">Tambah</a></td>
         </tr>

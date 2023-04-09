@@ -1,8 +1,3 @@
-# HirwiGo | Tourist Destination Decision Support System :computer:
-HirwiGo | Tourism Destination Decision Support System in the Greater Bandung Area <br>
-Using fuzzy logic tahani method in decision making <br>
-Intended to fulfill the big task of Informatics Logic course
-
 ## How to Use? :memo:
 ### Using phpMyAdmin
 1. Download and install xamppp
@@ -25,10 +20,3 @@ Intended to fulfill the big task of Informatics Logic course
 - Parking Area
 - Facility
 - Photo Spots
-
-## Team :black_nib:
-- [Alif](https://www.instagram.com/frappuccinogaze/)
-- [Ardian](https://www.instagram.com/not_ardian_hilman/)
-- [Riyandi](https://github.com/riyandifirman)
-- [Rizki](https://github.com/RizkiWahyudie)
-- [Suryani](https://www.instagram.com/sles1401/)
