@@ -53,7 +53,7 @@ include("koneksi2.php");
           </div>
         <div class="panel-body" style="align-content: center;">
           <div id="map" style="width:100%;height:480px;"></div>
-            <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDs835teuMFEjpu4Dxnv90gnPFQZiVMn_g"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA7zYQTZYNv0ytcpW9SQS2TvakBzscIuS8"></script>
 
               <script type="text/javascript">
                 function initialize() {

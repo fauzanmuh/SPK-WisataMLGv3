@@ -49,30 +49,36 @@ a:active {
     <td height="50" bgcolor="#F0F8FF" align="center"><span class="style1">Database SPK Pemilihan Objek Wisata Malang Raya</span></td>
   </tr>
   <tr>
-  <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="#">Kriteria Fuzzy</a> | <a href="#">Nilai Fuzzy</a> | <a href="wisatagis.php">GIS</a> | <a href="logout.php">Logout</a></span></td>
+    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="#">Kriteria Fuzzy</a> | <a href="#">Nilai Fuzzy</a> | <a href="wisatagis.php">GIS</a> | <a href="logout.php">Logout</a></span></td>
   </tr>
   <tr>
     <td align="center" valign="top" bgcolor="#F0FFFF"><br />
-      <strong>Data Wisata</strong><br />
+      <strong>Data Lokasi Wisata</strong><br />
       <br />
       <table width="700" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
         <tr>
           <td width="115" bgcolor="#FFFFFF" align="center">ID Wisata</td>
           <td width="202" bgcolor="#FFFFFF" align="center">Nama Wisata</td>
-          <td width="261" bgcolor="#FFFFFF" align="center">Deskripsi</td>
-          <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-alternatif.php">Tambah</a></td>
+          <td width="261" bgcolor="#FFFFFF" align="center">Website</td>
+          <td width="261" bgcolor="#FFFFFF" align="center">Alamat</td>
+          <td width="261" bgcolor="#FFFFFF" align="center">Latitude</td>
+          <td width="261" bgcolor="#FFFFFF" align="center">Longitude</td>
+          <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-gis.php">Tambah</a></td>
         </tr>
         <?php
-			$queryalternatif = mysqli_query($db, "SELECT * FROM alternatif ORDER BY id_alternatif");
-			while ($dataalternatif = mysqli_fetch_array($queryalternatif))
+			$querygis = mysqli_query($db, "SELECT * FROM wisata ORDER BY id_wisata");
+			while ($datagis = mysqli_fetch_array($querygis))
 			{
 		?>
         <tr>
-          <td bgcolor="#FFFFFF" align="center"><?php echo $dataalternatif['id_alternatif']; ?></td>
-          <td bgcolor="#FFFFFF"><?php echo $dataalternatif['nama_alternatif']; ?></td>
-          <td bgcolor="#FFFFFF"><?php echo $dataalternatif['deskripsi']; ?></td>
-          <td bgcolor="#FFFFFF"><a href="edit-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Edit</a> 
-          <a href="del-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Hapus</a></td>
+          <td bgcolor="#FFFFFF" align="center"><?php echo $datagis['id_wisata']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $datagis['nama_wisata']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $datagis['website']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $datagis['alamat']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $datagis['latitude']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $datagis['longitude']; ?></td>
+          <td bgcolor="#FFFFFF"><a href="edit-gis.php?id_wisata=<?php echo $datagis['id_wisata']; ?>">Edit</a> 
+          <a href="del-gis.php?id_wisata=<?php echo $datagis['id_wisata']; ?>">Hapus</a></td>
         </tr>
         <?php
 			}

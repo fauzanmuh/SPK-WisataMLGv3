@@ -8,8 +8,9 @@
 	}
 	if (isset($_POST['button']))
 	{
-		mysqli_query($db, "INSERT INTO alternatif(id_alternatif, nama_alternatif, deskripsi) VALUES('$_POST[id_alternatif]', '$_POST[nama_alternatif]', '$_POST[deskripsi]')");
-		header("location:alternatif.php");
+		mysqli_query($db, "UPDATE wisata SET nama_wisata = '$_POST[nama_wisata]', website = '$_POST[website]', alamat = '$_POST[alamat]', latitude = '$_POST[latitude]', 
+        longitude = '$_POST[longitude]' WHERE id_wisata = '$_POST[id_wisata]'");
+		header("location:wisatagis.php");
 	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -54,25 +55,42 @@ a:active {
     <td height="50" bgcolor="#F0F8FF" align="center"><span class="style1">Database SPK Pemilihan Objek Wisata Malang Raya</span></td>
   </tr>
   <tr>
-  <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="#">Kriteria Fuzzy</a> | <a href="#">Nilai Fuzzy</a> | <a href="wisatagis.php">GIS</a> | <a href="logout.php">Logout</a></span></td>
+    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | 
+    <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="wisatagis.php">GIS</a> | <a href="logout.php">Logout</a></span></td>
   </tr>
   <tr>
     <td align="center" valign="top" bgcolor="#F0FFFF"><br />
-      <strong>Tambah Data Wisata</strong><br />
+      <strong>Edit Data Lokasi Wisata</strong><br />
       <br />
+      <?php
+			$querygis = mysqli_query($db, "SELECT * FROM wisata WHERE id_wisata = '$_GET[id_wisata]'");
+			$datagis = mysqli_fetch_array($querygis);
+		?>
       <form id="form1" name="form1" method="post" action="">
         <table width="450" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
           <tr>
-            <td width="159" bgcolor="#FFFFFF">ID Wisata</td>
-            <td width="218" bgcolor="#FFFFFF"><input type="text" name="id_alternatif" id="id_alternatif" /></td>
+            <td bgcolor="#FFFFFF">ID Wisata</td>
+            <td bgcolor="#FFFFFF"><input type="text" name="id_wisata" id="id_wisata" readonly value="<?php echo $datagis['id_wisata']; ?>" /></td>
           </tr>
           <tr>
-            <td width="159" bgcolor="#FFFFFF">Nama Wisata</td>
-            <td width="218" bgcolor="#FFFFFF"><input type="text" name="nama_alternatif" id="nama_alternatif" /></td>
+            <td width="160" bgcolor="#FFFFFF">Nama Wisata</td>
+            <td width="267" bgcolor="#FFFFFF"><input type="text" name="nama_wisata" id="nama_wisata" value="<?php echo $datagis['nama_wisata']; ?>" /></td>
           </tr>
           <tr>
-            <td bgcolor="#FFFFFF">Deskripsi</td>
-            <td bgcolor="#FFFFFF"><textarea name="deskripsi" cols="30" rows="4" id="deskripsi"></textarea></td>
+            <td width="160" bgcolor="#FFFFFF">Website</td>
+            <td width="267" bgcolor="#FFFFFF"><input type="text" name="website" id="website" value="<?php echo $datagis['website']; ?>" /></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF">Alamat</td>
+            <td bgcolor="#FFFFFF"><textarea name="alamat" cols="30" rows="4" id="alamat"><?php echo $datagis['alamat']; ?></textarea></td>
+          </tr>
+          <tr>
+            <td width="160" bgcolor="#FFFFFF">Latitude</td>
+            <td width="267" bgcolor="#FFFFFF"><input type="text" name="latitude" id="latitude" value="<?php echo $datagis['latitude']; ?>" /></td>
+          </tr>
+          <tr>
+            <td width="160" bgcolor="#FFFFFF">Longitude</td>
+            <td width="267" bgcolor="#FFFFFF"><input type="text" name="longitude" id="longitude" value="<?php echo $datagis['longitude']; ?>" /></td>
           </tr>
           <tr>
             <td bgcolor="#FFFFFF">&nbsp;</td>
