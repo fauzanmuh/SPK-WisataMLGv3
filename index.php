@@ -51,10 +51,9 @@
         <ul class="navbar-nav ms-auto">
         </li>
           <li class="nav-item">
-            <a href="#" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
+            <a href="peta.php" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
               Cek Lokasi
             </a>
-          <li class="nav-item">
             <a href="#" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
               Cari Wisata
             </a>
