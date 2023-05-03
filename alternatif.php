@@ -12,6 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Database SPK Pemilihan Objek Wisata Malang Raya</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style type="text/css">
 <!--
 body,td,th {
@@ -55,7 +56,7 @@ a:active {
     <td align="center" valign="top" bgcolor="#F0FFFF"><br />
       <strong>Data Wisata</strong><br />
       <br />
-      <table width="700" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
+      <table width="700" border="2" cellpadding="5" cellspacing="1" bgcolor="#000099">
         <tr>
           <td width="115" bgcolor="#FFFFFF" align="center">ID Wisata</td>
           <td width="202" bgcolor="#FFFFFF" align="center">Nama Wisata</td>
@@ -63,23 +64,72 @@ a:active {
           <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-alternatif.php">Tambah</a></td>
         </tr>
         <?php
-			$queryalternatif = mysqli_query($db, "SELECT * FROM alternatif ORDER BY id_alternatif");
-			while ($dataalternatif = mysqli_fetch_array($queryalternatif))
-			{
-		?>
+      $page = (isset($_GET['page']))? $_GET['page'] : 1;
+      $limit = 10; 
+      $limit_start = ($page - 1) * $limit;
+      $no = $limit_start + 1;
+ 
+      $query = "SELECT * FROM alternatif ORDER BY id_alternatif ASC LIMIT $limit_start, $limit";
+      $hal = $db->prepare($query);
+      $hal->execute();
+      $res1 = $hal->get_result();
+      while ($row = $res1->fetch_assoc()) {
+    ?>
         <tr>
-          <td bgcolor="#FFFFFF" align="center"><?php echo $dataalternatif['id_alternatif']; ?></td>
-          <td bgcolor="#FFFFFF"><?php echo $dataalternatif['nama_alternatif']; ?></td>
-          <td bgcolor="#FFFFFF"><?php echo $dataalternatif['deskripsi']; ?></td>
-          <td bgcolor="#FFFFFF"><a href="edit-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Edit</a> 
-          <a href="del-alternatif.php?id_alternatif=<?php echo $dataalternatif['id_alternatif']; ?>">Hapus</a></td>
+          <td bgcolor="#FFFFFF" align="center"><?php echo $row['id_alternatif']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $row['nama_alternatif']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $row['deskripsi']; ?></td>
+          <td bgcolor="#FFFFFF"><a href="edit-alternatif.php?id_alternatif=<?php echo $row['id_alternatif']; ?>">Edit</a> 
+          <a href="del-alternatif.php?id_alternatif=<?php echo $row['id_alternatif']; ?>">Hapus</a></td>
         </tr>
         <?php
 			}
 		?>
       </table>
       <br />
-    <br /></td>
+      <?php
+  $query_jumlah = "SELECT count(*) AS jumlah FROM alternatif";
+  $hal = $db->prepare($query_jumlah);
+  $hal->execute();
+  $res1 = $hal->get_result();
+  $row = $res1->fetch_assoc();
+  $total_records = $row['jumlah'];
+?>
+<p>Total baris : <?php echo $total_records; ?></p>
+<nav class="mb-5">
+  <ul class="pagination justify-content-end">
+    <?php
+      $jumlah_page = ceil($total_records / $limit);
+      $jumlah_number = 1; //jumlah halaman ke kanan dan kiri dari halaman yang aktif
+      $start_number = ($page > $jumlah_number)? $page - $jumlah_number : 1;
+      $end_number = ($page < ($jumlah_page - $jumlah_number))? $page + $jumlah_number : $jumlah_page;
+      
+      if($page == 1){
+        echo '<li class="page-item disabled"><a class="page-link" href="#">First</a></li>';
+        echo '<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>';
+      } else {
+        $link_prev = ($page > 1)? $page - 1 : 1;
+        echo '<li class="page-item"><a class="page-link" href="?page=1">First</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="?page='.$link_prev.'" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+      }
+ 
+      for($i = $start_number; $i <= $end_number; $i++){
+        $link_active = ($page == $i)? ' active' : '';
+        echo '<li class="page-item '.$link_active.'"><a class="page-link" href="?page='.$i.'">'.$i.'</a></li>';
+      }
+ 
+      if($page == $jumlah_page){
+        echo '<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a></li>';
+        echo '<li class="page-item disabled"><a class="page-link" href="#">Last</a></li>';
+      } else {
+        $link_next = ($page < $jumlah_page)? $page + 1 : $jumlah_page;
+        echo '<li class="page-item"><a class="page-link" href="?page='.$link_next.'" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+        echo '<li class="page-item"><a class="page-link" href="?page='.$jumlah_page.'">Last</a></li>';
+      }
+    ?>
+  </ul>
+</nav>
+    </td>
   </tr>
   <tr>
   <td bgcolor="#F0F8FF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -87,7 +137,8 @@ a:active {
       <td width="47%" height="35" align="left"><strong>&copy; Muhammad Fauzan</strong></td>
         <td width="53%" height="35" align="right"><strong> POLINEMA 2023</td>
       </tr>
-    </table></td>
+    </table>
+    </td>
   </tr>
 </table>
 </body>
