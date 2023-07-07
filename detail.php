@@ -2,12 +2,12 @@
 $id = $_GET['id'];
 include_once "ambildata_id.php";
 $obj = json_decode($data);
-$titles="";
-$ids="";
-$web="";
-$alamat="";
-$lat="";
-$long="";
+$titles = "";
+$ids = "";
+$web = "";
+$alamat = "";
+$lat = "";
+$long = "";
 foreach($obj->results as $item){
   $titles.=$item->nama_wisata;
   $ids.=$item->id_wisata;

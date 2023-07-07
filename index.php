@@ -12,11 +12,13 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
   <title>Uklam-Uklam App</title>
   <link rel="icon" href="https://cdn.icon-icons.com/icons2/3565/PNG/512/summer_holiday_vacation_tourism_and_travel_icon_225375.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="assets/style_item.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style_item.css">
   <!---<title> Responsive Our Team Section | CodingLab </title>---->
   <!-- Fontawesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 
 <body>
@@ -41,12 +43,6 @@
           <li class="nav-item">
             <a class="nav-link text-decoration-none" href="#topic">Topik</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" href="#method">Metode</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" href="#parameter">Parameter & Algorithma</a>
-          </li>
         </ul>
         <ul class="navbar-nav ms-auto">
         </li>
@@ -54,7 +50,7 @@
             <a href="peta.php" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
               Cek Lokasi
             </a>
-            <a href="#" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
+            <a href="pemilihan-wisata.php" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
               Cari Wisata
             </a>
           </li>
@@ -72,12 +68,13 @@
       <div class="flex-item-left">
         <h1 class="display-3"><strong><strong>Uklam-Uklam</strong></strong></h1>
         <label class="home_subtitle mt-1 text-muted">Uklam-Uklam merupakan sistem pendukung keputusan pemilihan destinasi wisata di kawasan Malang Raya. Yuk Cari destinasi wisata mu disini berdasarkan kriteria kamu inginkan!</label> <br>
-        <a href="#" class="btn text-decoration-none rounded btn-primary mt-3 py-3">
+        <a href="pemilihan-wisata.php" class="btn text-decoration-none rounded btn-primary mt-3 py-3">
           Cari Wisata &nbsp;<i class="uil uil-location-arrow button_icon"></i>
         </a>
       </div>
+      <br>
       <div class="flex-item-right">
-        <img src="assets/hiking.png" class="img-fluid rounded-3" alt="">
+        <img src="assets/turist.jpg" class="img-fluid rounded-3" alt="">
       </div>
     </div>
     <div class="container home_scroll-button mt-2">
@@ -143,6 +140,286 @@
             <a target="_blank" href="https://salsawisata.com/air-terjun-coban-rondo/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
           </div>
         </div>
+        <div class="card_destination">
+          <img src="assets/wisata/hawaiwaterpark.jpg"/>
+          <div class="infoo">
+            <h5>Hawaii Waterpark</h5>
+            <p><small><small>
+                  Destinasi wisata berbagai macam kolam renang harga tiket Rp. 85.000
+                </small></small></p>
+            <a target="_blank" href="https://travelspromo.com/htm-wisata/hawai-waterpark-malang-harga-tiket-masuk-2015/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/telukasmara.jpg"/>
+          <div class="infoo">
+            <h5>Pantai Teluk Asmara</h5>
+            <p><small><small>
+                  Destinasi wisata pantai dengan harga tiket Rp. 15.000
+                </small></small></p>
+            <a target="_blank" href="travelspromo.com/htm-wisata/pantai-teluk-asmara-malang"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/balekambang.jpg"/>
+          <div class="infoo">
+            <h5>Pantai Balekambang</h5>
+            <p><small><small>
+                  Destinasi wisata pantai dengan harga tiket Rp. 20.000
+                </small></small></p>
+            <a target="_blank" href="https://salsawisata.com/air-terjun-coban-rondo/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/ngliyep.jpg"/>
+          <div class="infoo">
+            <h5>Pantai Ngliyep</h5>
+            <p><small><small>
+                  Destinasi wisata pantai dengan harga tiket Rp. 15.000
+                </small></small></p>
+            <a target="_blank" href="https://piknikwisata.com/jatim/malang/pantai/ngliyep/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/sendangbiru.jpg"/>
+          <div class="infoo">
+            <h5>Pantai Sendangbiru</h5>
+            <p><small><small>
+                  Destinasi wisata pantai dengan harga tiket Rp. 12.000
+                </small></small></p>
+            <a target="_blank" href="https://sikidang.com/pantai-sendang-biru/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/3warna.jpg"/>
+          <div class="infoo">
+            <h5>Pantai Tiga Warna</h5>
+            <p><small><small>
+                  Destinasi wisata pantai dengan harga tiket Rp. 10.000
+                </small></small></p>
+            <a target="_blank" href="https://sikidang.com/pantai-tiga-warna"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/bajulmati.jpg"/>
+          <div class="infoo">
+            <h5>Pantai Bajulmati</h5>
+            <p><small><small>
+                  Destinasi wisata pantai dengan harga tiket Rp. 10.000
+                </small></small></p>
+            <a target="_blank" href="https://sikidang.com/pantai-bajul-mati"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/kampungtridi.jpg"/>
+          <div class="infoo">
+            <h5>Kampung Tridi</h5>
+            <p><small><small>
+                  Destinasi wisata rumah warna-warni dengan harga tiket Rp. 3.000
+                </small></small></p>
+            <a target="_blank" href="https://atourin.com/destination/malang/kampung-tridi"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/sumbersirah.jpg"/>
+          <div class="infoo">
+            <h5>Sumber Sirah</h5>
+            <p><small><small>
+                  Destinasi sumber air dengan harga tiket Rp. 5.000
+                </small></small></p>
+            <a target="_blank" href="https://sikidang.com/sumber-sirah/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/omahkayu.jpg"/>
+          <div class="infoo">
+            <h5>Omah Kayu</h5>
+            <p><small><small>
+                  Destinasi wisata rumah kayu dengan harga tiket Rp. 10.000
+                </small></small></p>
+            <a target="_blank" href="https://salsawisata.com/omah-kayu-malang/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/paralayang.jpg"/>
+          <div class="infoo">
+            <h5>Paralayang</h5>
+            <p><small><small>
+                  Destinasi wisata alam dan Paralayang dengan harga tiket masuk Rp. 10.000
+                </small></small></p>
+            <a target="_blank" href="https://penginapan.net/harga-tiket-masuk-fasilitas-dan-biaya-paralayang-batu-malang/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/goapinus.jpg"/>
+          <div class="infoo">
+            <h5>Goa Pinus</h5>
+            <p><small><small>
+                  Destinasi wisata di kawasan hutan pinus dengan harga tiket Rp. 10.000
+                </small></small></p>
+            <a target="_blank" href="https://travelspromo.com/htm-wisata/goa-pinus-batu/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/mmtd.jpg"/>
+          <div class="infoo">
+            <h6>Museum Malang Tempoe Doeloe</h6>
+            <p><small><small>
+                  Destinasi wisata sejarah & edukasi dengan harga tiket Rp. 25.000 Namun sudah tutup permanen
+                </small></small></p>
+            <a target="_blank" href="https://sikidang.com/museum-malang-tempo-doeloe/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/mbrawijaya.jpg"/>
+          <div class="infoo">
+            <h5>Museum Brawijaya</h5>
+            <p><small><small>
+                  Destinasi wisata sejarah & edukasi dengan harga tiket Rp. 5.000
+                </small></small></p>
+            <a target="_blank" href="https://salsawisata.com/museum-brawijaya/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/jtp1.jpg"/>
+          <div class="infoo">
+            <h5>Jawa Timur Park 1</h5>
+            <p><small><small>
+                  Destinasi wisata berbagai macam wahana seru dengan harga tiket Rp. 100.000
+                </small></small></p>
+            <a target="_blank" href="https://jtp.id/jatimpark1/mobile/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/jtp2.jpg"/>
+          <div class="infoo">
+            <h5>Jawa Timur Park 2</h5>
+            <p><small><small>
+                  Destinasi wisata berbagai macam fauna dengan harga tiket Rp. 140.000
+                </small></small></p>
+            <a target="_blank" href="https://jtp.id/batusecretzoo/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/jtp3.jpg"/>
+          <div class="infoo">
+            <h5>Jawa Timur Park 3</h5>
+            <p><small><small>
+                  Destinasi wisata sejarah dinosaurus dengan harga tiket mulai dari Rp. 125.000
+                </small></small></p>
+            <a target="_blank" href="https://jtp.id/jatimpark3/mobile/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/aakb.jpg"/>
+          <div class="infoo">
+            <h5>Alun-Alun Kota Batu</h5>
+            <p><small><small>
+                  Destinasi wisata ikonik dengan bianglala dengan harga tiket masuk GRATIS
+                </small></small></p>
+            <a target="_blank" href="https://travelspromo.com/htm-wisata/alun-alun-kota-wisata-batu/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/bns.jpg"/>
+          <div class="infoo">
+            <h5>Batu Night Spectacular</h5>
+            <p><small><small>
+                  Destinasi wisata dengan wahana seru dan lampu warna-warni dengan harga tiket masuk Rp. 35.000
+                </small></small></p>
+            <a target="_blank" href="https://jtp.id/bns/mobile/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/mangkut.jpg"/>
+          <div class="infoo">
+            <h5>Museum Angkut</h5>
+            <p><small><small>
+                  Destinasi wisata menyediakan koleksi berbagai macam kendaraan dengan harga tiket masuk Rp. 110.000
+                </small></small></p>
+            <a target="_blank" href="https://jtp.id/museumangkut/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/baloga.jpg"/>
+          <div class="infoo">
+            <h5>Batu Love Garden</h5>
+            <p><small><small>
+                  Destinasi wisata berbagai macam flora dengan harga tiket masuk Rp. 60.000
+                </small></small></p>
+            <a target="_blank" href="https://jtp.id/batulovegarden/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/santerra.jpg"/>
+          <div class="infoo">
+            <h5>Florawisata Santerra De Laponte</h5>
+            <p><small><small>
+                  Destinasi wisata dengan spot foto instagramable dengan harga tiket masuk Rp. 30.000
+                </small></small></p>
+            <a target="_blank" href="https://travelspromo.com/htm-wisata/flora-wisata-san-terra-malang/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/ktwonosari.jpg"/>
+          <div class="infoo">
+            <h5>Kebun Teh Wonosari</h5>
+            <p><small><small>
+                  Destinasi wisata pemandangan kebun teh dan petik daun teh dengan harga tiket masuk Rp. 12.000
+                </small></small></p>
+            <a target="_blank" href="https://sikidang.com/kebun-teh-wonosari//"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/aakm.jpg"/>
+          <div class="infoo">
+            <h5>Alun-Alun Kota Malang</h5>
+            <p><small><small>
+                  Destinasi wisata untuk bersantai bersama keluarga maupun pasangan dengan harga tiket masuk GRATIS
+                </small></small></p>
+            <a target="_blank" href="https://salsawisata.com/alun-alun-kota-malang/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/kbp.jpg"/>
+          <div class="infoo">
+            <h5>Kampung Budaya Polowijen</h5>
+            <p><small><small>
+                  Destinasi wisata edukasi dengan harga tiket masuk GRATIS jika pengunjung 1 - 2 orang
+                </small></small></p>
+            <a target="_blank" href="https://atourin.com/destination/malang/kampung-budaya-polowijen/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/mmp.jpg"/>
+          <div class="infoo">
+            <h5>Museum Mpu Purwa</h5>
+            <p><small><small>
+                  Destinasi wisata museum yang mengoleksi benda purbakala dengan harga tiket masuk GRATIS
+                </small></small></p>
+            <a target="_blank" href="https://tempatwisata.pro/wisata/Museum-Mpu-Purwa"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/cbadut.jpg"/>
+          <div class="infoo">
+            <h5>Candi Badut</h5>
+            <p><small><small>
+                  Destinasi wisata berupa candi peninggalan Kerajaan Kanjuruhan dengan harga tiket masuk Rp. 10.000
+                </small></small></p>
+            <a target="_blank" href="https://sikidang.com/candi-badut/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
+        <div class="card_destination">
+          <img src="assets/wisata/csingosari.jpg"/>
+          <div class="infoo">
+            <h5>Candi Singosari</h5>
+            <p><small><small>
+                  Destinasi wisata berupa candi peninggalan Kerajaan Singasari dengan harga tiket masuk GRATIS
+                </small></small></p>
+            <a target="_blank" href="https://salsawisata.com/candi-singosari/"><small><small>Cek Informasi </small><i class="uil uil-plane-departure"></i></small></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -154,15 +431,15 @@
         <h3 class="text-center mb-2">Rekomendasi Wisata</h3>
       <div class="flex-container mt-2">
       <div class="flex-item-left">
-          <h5 class="video_title">Inside the Sulfur Lakes of a Volcano in Bandung (Kawah Putih)</h5>
-          <label class="text-muted"><small><small>178,008 views - Premiered Apr 1, 2021</small></small></label>
-          <p class="video_p">"This white crater lake is composed of sulfur giving it a unique color and ominous feel like something out of a movie. This is a must see if you are visiting Bandung Indonesia!"</p>
+          <h5 class="video_title">Inside Jawa Timur Park 1</h5>
+          <label class="text-muted"><small><small>189,010 views - Premiered Apr 4, 2023</small></small></label>
+          <p class="video_p">"Jawa Timur Park Satu adalah Taman Hiburan dengan Tema Pameran adat budaya Indonesia yang dilengkapi dengan pembelajaran Science Center"</p>
           <a href="https://www.google.com/maps/place/Jawa+Timur+Park+1/@-7.884152,112.489808,14z/data=!4m10!1m2!2m1!1sjatim+park+1!3m6!1s0x2e78872ad61d07b9:0x59a848ad52479780!8m2!3d-7.884152!4d112.5248269!15sCgxqYXRpbSBwYXJrIDFaDiIMamF0aW0gcGFyayAxkgERcmVjcmVhdGlvbl9jZW50ZXLgAQA!16s%2Fg%2F1q5bkzmkt" target="_blank" class="btn text-decoration-none rounded-pill btn-primary mt-2 py-3">
             Visit &nbsp;<i class="uil uil-map-pin-alt button_icon"></i>
           </a>
       </div>
       <div class="flex-item-right">
-        <a href="https://youtu.be/OoSinKtNLVc" target="_blank">
+        <a href="#" target="_blank">
             <img class="img-fluid rounded-3" src="assets/wisata/jatimpark1.jpg" alt=""/>
         </a>
       </div>
@@ -248,211 +525,7 @@
     </div>
   </section>
 
-  <!--  Problem Solving -->
-  <section class="container my-5" id="solusi">
-    <div class="row justify-content-md-center">
-      <div class="col-lg-1 topic_1"></div>
-      <div class="col-lg-5 fuzzy_component topic_2">
-        <span class="text-primary"><small>Ide Tim Petualang</small></span>
-        <h3>Problem Solving</h3>
-        <p class="topic_p mt-3 text-dark">
-          Membuat Website untuk Sistem Pendukung Keputusan Destinasi Wisata di Kawasan Bandung Raya.
-          Dengan menggunakan <strong>metode Fuzzy Logic</strong>
-        <div class="mt-4">
-          <a href="" class="text-decoration-none">
-            <i class="uil uil-image-search fs-3"></i>
-            <label class="h6 button--flex button--small button--link services_button">
-              Lihat Destinasi
-              <i class="uil uil-arrow-right button_icon"></i>
-            </label>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-5 topic_3">
-        <img src="assets/solvee.png" class="img-fluid rounded-3 solve_img" alt="">
-      </div>
-      <div class="col-lg-1 topic_4"></div>
-    </div>
-    </div>
-  </section>
-
-  <!-- FUZZY -->
-  <div class="container my-5" id="method">
-    <div class="row justify-content-md-center">
-      <div class="col-lg-1"></div>
-      <div class="col-lg-5">
-        <img src="assets/question.jpg" class="img-fluid rounded-3 mb-3" alt="">
-      </div>
-      <div class="col-lg-5 fuzzy_component">
-        <span class="text-primary"><small>Metode Fuzzy Tahani</small></span>
-        <h4>Kenapa Memilih Metode Fuzzy Tahani ?</h4>
-        <span class="text-muted"><small>Logika Fuzzy adalah suatu cara yang tepat untuk memetakan suatu ruang input ke dalam ruang output.
-          </small></span>
-        <div class="row p-2 shadow-sm bg-body rounded ms-1 mt-4">
-          <div class="col-2 fuzzy_component">
-            <a href="#">
-              <i class="uil uil-star fs-1 warning"></i>
-            </a>
-          </div>
-          <div class="col">
-            <label><strong>Mudah</strong></label><br>
-            <span class="text-muted"><small>Konsep logika Fuzzy mudah dimengerti</small></span>
-          </div>
-        </div>
-        <div class="row p-2 shadow-sm bg-body rounded ms-1 mt-3">
-          <div class="col-2 fuzzy_component">
-            <a href="#">
-              <i class="uil uil-check-circle fs-1 warning"></i>
-            </a>
-          </div>
-          <div class="col">
-            <label><strong>Fleksibel</strong></label><br>
-            <span class="text-muted"><small>Implementasi Fuzzy tak terbatas</small></span>
-          </div>
-        </div>
-        <div class="row p-2 shadow-sm bg-body rounded ms-1 mt-3">
-          <div class="col-2 fuzzy_component">
-            <a href="#">
-              <i class="uil uil-border-alt fs-1 warning"></i>
-            </a>
-          </div>
-          <div class="col">
-            <label><strong>Toleransi</strong></label><br>
-            <span class="text-muted"><small>Toleransi terhadap data yang tidak akurat</small></span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-1"></div>
-    </div>
-  </div>
-
-  <!-- PARAMETERS -->
-  <center>
-    <div class="container" id="parameter">
-      <div class="parameter_img">
-        <div>
-          <span><small>Parameter</small></span>
-          <h4>Parameter Yang Digunakan</h4>
-        </div>
-        <div class="parameter_text">
-          <h5 class="parameter4"><i class="uil uil-star"> </i> Fasilitas</h5>
-          <h5 class="parameter2"><i class="uil uil-bill"> </i> Harga</h5>
-          <h5 class="parameter1"><i class="uil uil-map-pin-alt"> </i> Jarak</h5>
-          <h5 class="parameter5"><i class="uil uil-sign-alt"> </i> Parkiran</h5>
-          <h5 class="parameter3"><i class="uil uil-camera-plus"> </i> Spot Foto</h5>
-        </div>
-      </div>
-    </div>
-  </center>
-
-  <!-- Alghoritma -->
-  <div class="container my-5">
-    <span class="text-primary d-flex justify-content-center"><small>Perhitungan</small></span>
-    <h3 class="text-center mb-4">Alghoritma Parameter</h3>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Parameter Fasilitas
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col">
-                <img src="assets/fuzzy/Fungsi Keanggotaan Fasilitas.PNG" class="img-fluid" alt="">
-              </div>
-              <div class="col">
-                <img src="assets/fuzzy/Rumus Fungsi Keanggotaan Fasilitas.PNG" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Parameter Harga
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col">
-                <img src="assets/fuzzy/Fungsi Keanggotaan Harga.PNG" class="img-fluid" alt="">
-              </div>
-              <div class="col">
-                <img src="assets/fuzzy/Rumus Fungsi Keanggotaan Harga.PNG" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Parameter Jarak
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col">
-                <img src="assets/fuzzy/Fungsi Keanggotaan Jarak.PNG" class="img-fluid" alt="">
-              </div>
-              <div class="col">
-                <img src="assets/fuzzy/Rumus Fungsi Keanggotaan Jarak.PNG" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Parameter Luas Parkir
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col">
-                <img src="assets/fuzzy/Fungsi Keanggotaan Parkiran.PNG" class="img-fluid" alt="">
-              </div>
-              <div class="col">
-                <img src="assets/fuzzy/Rumus Fungsi Keanggotaan Parkiran.PNG" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            Parameter Spot Foto
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col">
-                <img src="assets/fuzzy/Fungsi Keanggotaan Spot Foto.PNG" class="img-fluid" alt="">
-              </div>
-              <div class="col">
-                <img src="assets/fuzzy/Rumus Fungsi Keanggotaan Spot Foto.PNG" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <footer class="footer-distributed">
-
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
 			<div class="footer-left">
 				<h3>About<span>Application</span></h3>
@@ -464,9 +537,6 @@
 					|
 					<a href="#topic">Topik</a>
 					|
-					<a href="#method">Metode</a>
-          |
-					<a href="#parameter">Parameter</a>
 				</p>
 
 				<p class="footer-company-name">© 2023 Muhammad Fauzan</p>

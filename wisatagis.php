@@ -1,8 +1,7 @@
 <?php
 	session_start();
 	include("koneksi.php");
-	if (@$_SESSION['userlogin'] == "")
-	{
+	if (@$_SESSION['userlogin'] == "") {
 		header("location:login.php?pesan=Belum Login");
 		exit;
 	}
@@ -50,7 +49,8 @@ a:active {
     <td height="50" bgcolor="#F0F8FF" align="center"><span class="style1">Database SPK Pemilihan Objek Wisata Malang Raya</span></td>
   </tr>
   <tr>
-    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="#">Kriteria Fuzzy</a> | <a href="#">Nilai Fuzzy</a> | <a href="wisatagis.php">GIS</a> | <a href="logout.php">Logout</a></span></td>
+    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | 
+    <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="wisatagis.php">GIS</a> | <a href="logout.php">Logout</a></span></td>
   </tr>
   <tr>
     <td align="center" valign="top" bgcolor="#F0FFFF"><br />
@@ -64,7 +64,7 @@ a:active {
           <td width="261" bgcolor="#FFFFFF" align="center">Alamat</td>
           <td width="261" bgcolor="#FFFFFF" align="center">Latitude</td>
           <td width="261" bgcolor="#FFFFFF" align="center">Longitude</td>
-          <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-gis.php">Tambah</a></td>
+          <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-gis.php"><button class="btn btn-success btn-sm">Tambah</button></a></td>
         </tr>
         <?php
       $page = (isset($_GET['page']))? $_GET['page'] : 1;
@@ -86,8 +86,8 @@ a:active {
           <td bgcolor="#FFFFFF"><?php echo $datagis['alamat']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $datagis['latitude']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $datagis['longitude']; ?></td>
-          <td bgcolor="#FFFFFF"><a href="edit-gis.php?id_wisata=<?php echo $datagis['id_wisata']; ?>">Edit</a> 
-          <a href="del-gis.php?id_wisata=<?php echo $datagis['id_wisata']; ?>">Hapus</a></td>
+          <td bgcolor="#FFFFFF"><a href="edit-gis.php?id_wisata=<?php echo $datagis['id_wisata']; ?>"><button class="btn btn-primary btn-sm">Edit</button></a>
+          <a href="del-gis.php?id_wisata=<?php echo $datagis['id_wisata']; ?>"><button class="btn btn-danger btn-sm" type="submit" onclick="alert('Hapus');">Hapus</button></a></td>
         </tr>
         <?php
 			}

@@ -6,7 +6,8 @@ if (isset($_POST['button'])) {
     session_start();
     $_SESSION['userlogin'] = $datalogin['username'];
     header("location:admin.php");
-  } else {
+  } 
+  else {
     header("location:login.php?pesan=Login Gagal");
   }
 }

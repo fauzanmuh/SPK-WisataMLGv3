@@ -1,13 +1,11 @@
 <?php
 	session_start();
 	include("koneksi.php");
-	if (@$_SESSION['userlogin'] == "")
-	{
+	if (@$_SESSION['userlogin'] == "") {
 		header("location:login.php?pesan=Belum Login");
 		exit;
 	}
-	if (isset($_POST['button']))
-	{
+	if (isset($_POST['button'])) {
 		mysqli_query($db, "UPDATE alternatif SET nama_alternatif = '$_POST[nama_alternatif]', deskripsi = '$_POST[deskripsi]'  WHERE id_alternatif = '$_POST[id_alternatif]'");
 		header("location:alternatif.php");
 	}
@@ -54,7 +52,8 @@ a:active {
     <td height="50" bgcolor="#F0F8FF" align="center"><span class="style1">Database SPK Pemilihan Objek Wisata Malang Raya</span></td>
   </tr>
   <tr>
-    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="logout.php">Logout</a></span></td>
+    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | 
+    <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="logout.php">Logout</a></span></td>
   </tr>
   <tr>
     <td align="center" valign="top" bgcolor="#F0FFFF"><br />

@@ -1,8 +1,7 @@
 <?php
 	session_start();
 	include("koneksi.php");
-	if (@$_SESSION['userlogin'] == "")
-	{
+	if (@$_SESSION['userlogin'] == "") {
 		header("location:login.php?pesan=Belum Login");
 		exit;
 	}

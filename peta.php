@@ -1,6 +1,3 @@
-<?php
-include("koneksi2.php");
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -27,24 +24,33 @@ include("koneksi2.php");
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-white">
-		<div class="container navbar">
-			<a class="navbar-brand text-decoration-none mb-0 brandd text-primary" href="index.php">
-				<i class="uil uil-bus-school fs-5" width="30px"></i>
-				<strong>Uklam-Uklam</strong>
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link text-decoration-none active" href="index.php">Home</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container navbar">
+      <a class="navbar-brand text-decoration-none mb-0 brandd text-primary" href="index.php">
+        <i class="uil uil-bus-school fs-5" width="30px"></i>
+        <strong>Uklam-Uklam</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+        </li>
+          <li class="nav-item">
+            <a href="peta.php" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
+              Cek Lokasi
+            </a>
+            <a href="pemilihan-wisata.php" class="btn text-decoration-none rounded-pill btn-primary mx-lg-2">
+              Cari Wisata
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn text-decoration-none rounded-pill btn-outline-primary" href="login.php">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <section id="services" class="services section-bg">
       <div class="container">

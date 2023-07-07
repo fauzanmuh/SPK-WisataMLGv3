@@ -6,8 +6,9 @@
 		exit;
 	}
 	if (isset($_POST['button'])) {
-		mysqli_query($db, "INSERT INTO alternatif(id_alternatif, nama_alternatif, deskripsi) VALUES('$_POST[id_alternatif]', '$_POST[nama_alternatif]', '$_POST[deskripsi]')");
-		header("location:alternatif.php");
+		mysqli_query($db, "INSERT INTO kriteria_fuzzy(id_kriteria_fuzzy, nama_kriteria_fuzzy, batas_bawah, batas_tengah, batas_atas, nama_bawah, nama_tengah, nama_atas) 
+        VALUES('$_POST[id_kriteria_fuzzy]', '$_POST[nama_kriteria_fuzzy]', '$_POST[batas_bawah]', '$_POST[batas_tengah]', '$_POST[batas_atas]', '$_POST[nama_bawah]', '$_POST[nama_tengah]', '$_POST[nama_atas]')");
+		header("location:kriteria-fuzzy.php");
 	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -57,28 +58,48 @@ a:active {
   </tr>
   <tr>
     <td align="center" valign="top" bgcolor="#F0FFFF"><br />
-      <strong>Tambah Data Wisata</strong><br />
+      <strong>Tambah Data Kriteria Fuzzy</strong><br />
       <br />
       <form id="form1" name="form1" method="post" action="">
-        <table width="450" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
+        <table width="350" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
           <tr>
-            <td width="159" bgcolor="#FFFFFF">ID Wisata</td>
-            <td width="218" bgcolor="#FFFFFF"><input type="text" name="id_alternatif" id="id_alternatif" /></td>
+            <td width="128" bgcolor="#FFFFFF">ID Kriteria Fuzzy</td>
+            <td width="249" bgcolor="#FFFFFF"><input type="text" name="id_kriteria_fuzzy" id="id_kriteria_fuzzy" /></td>
           </tr>
           <tr>
-            <td width="159" bgcolor="#FFFFFF">Nama Wisata</td>
-            <td width="218" bgcolor="#FFFFFF"><input type="text" name="nama_alternatif" id="nama_alternatif" /></td>
+            <td width="128" bgcolor="#FFFFFF">Nama Kriteria Fuzzy</td>
+            <td width="249" bgcolor="#FFFFFF"><input type="text" name="nama_kriteria_fuzzy" id="nama_kriteria_fuzzy" /></td>
           </tr>
           <tr>
-            <td bgcolor="#FFFFFF">Deskripsi</td>
-            <td bgcolor="#FFFFFF"><textarea name="deskripsi" cols="30" rows="4" id="deskripsi"></textarea></td>
+            <td bgcolor="#FFFFFF">Batas Bawah</td>
+            <td bgcolor="#FFFFFF"><input type="text" name="batas_bawah" id="batas_bawah" /></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF">Batas Tengah</td>
+            <td bgcolor="#FFFFFF"><input type="text" name="batas_tengah" id="batas_tengah" /></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF">Batas Atas</td>
+            <td bgcolor="#FFFFFF"><input type="text" name="batas_atas" id="batas_atas" /></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF">Nama Bawah</td>
+            <td bgcolor="#FFFFFF"><input type="text" name="nama_bawah" id="nama_bawah" /></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF">Nama Tengah</td>
+            <td bgcolor="#FFFFFF"><input type="text" name="nama_tengah" id="nama_tengah" /></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF">Nama Atas</td>
+            <td bgcolor="#FFFFFF"><input type="text" name="nama_atas" id="nama_atas" /></td>
           </tr>
           <tr>
             <td bgcolor="#FFFFFF">&nbsp;</td>
             <td bgcolor="#FFFFFF"><input type="submit" name="button" id="button" value="Simpan" /></td>
           </tr>
         </table>
-      </form>
+        </form>
       <br />
     <br /></td>
   </tr>

@@ -1,13 +1,11 @@
 <?php
 	session_start();
 	include("koneksi.php");
-	if (@$_SESSION['userlogin'] == "")
-	{
+	if (@$_SESSION['userlogin'] == "") {
 		header("location:login.php?pesan=Belum Login");
 		exit;
 	}
-	if (isset($_POST['button']))
-	{
+	if (isset($_POST['button'])) {
 		mysqli_query($db, "UPDATE wisata SET nama_wisata = '$_POST[nama_wisata]', website = '$_POST[website]', alamat = '$_POST[alamat]', latitude = '$_POST[latitude]', 
         longitude = '$_POST[longitude]' WHERE id_wisata = '$_POST[id_wisata]'");
 		header("location:wisatagis.php");
