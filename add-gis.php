@@ -6,7 +6,7 @@
 		exit;
 	}
 	if (isset($_POST['button'])) {
-		mysqli_query($db, "INSERT INTO wisata(id_wisata, nama_wisata, website, alamat, latitude, longitude) VALUES('$_POST[id_wisata]', '$_POST[nama_wisata]', '$_POST[website]', 
+		mysqli_query($db, "INSERT INTO wisata(id_wisata, id_alternatif, nama_wisata, website, alamat, latitude, longitude) VALUES('$_POST[id_wisata]', '$_POST[id_alternatif]','$_POST[nama_wisata]', '$_POST[website]', 
         '$_POST[alamat]', '$_POST[latitude]', '$_POST[longitude]')");
 		header("location:wisatagis.php");
 	}
@@ -62,9 +62,20 @@ a:active {
       <br />
       <form id="form1" name="form1" method="post" action="">
         <table width="450" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
-          <tr>
-            <td width="159" bgcolor="#FFFFFF">Nama Wisata</td>
-            <td width="218" bgcolor="#FFFFFF"><input type="text" name="nama_wisata" id="nama_wisata" /></td>
+        <tr>
+            <td bgcolor="#FFFFFF">Alternatif</td>
+            <td bgcolor="#FFFFFF"><select name="id_alternatif" id="id_alternatif">
+                <option value=""></option>
+                <?php
+					$queryalternatif = mysqli_query($db, "SELECT * FROM alternatif ORDER BY id_alternatif");
+					while ($dataalternatif = mysqli_fetch_array($queryalternatif)) {
+				?>
+                <option value="<?php echo $dataalternatif['id_alternatif']; ?>"><?php echo $dataalternatif['nama_alternatif']; ?></option>
+                <?php
+					}
+				?>
+              </select>
+            </td>
           </tr>
           <tr>
             <td width="159" bgcolor="#FFFFFF">Website</td>

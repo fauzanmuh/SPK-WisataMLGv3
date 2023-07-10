@@ -9,8 +9,7 @@ $alamat = "";
 $lat = "";
 $long = "";
 foreach($obj->results as $item){
-  $titles.=$item->nama_wisata;
-  $ids.=$item->id_wisata;
+  $titles.=$item->id_alternatif;
   $web.=$item->website;
   $alamat.=$item->alamat;
   $lat.=$item->latitude;

@@ -293,7 +293,7 @@ include("koneksi.php");
 			</div>
 		</div>
 		<div class="container">
-			<input type="button" class="btn btn-primary rounded-3 mt-2" value="Lihat Hasil Detail" onclick="document.getElementById('perhitungan').style.display='block';" />
+			<input type="button" class="btn btn-primary rounded-3 mt-2" value="Lihat Hasil Detail" style="visibility: hidden" onclick="document.getElementById('perhitungan').style.display='block';" />
 			<h4 class="mt-5 mb-3">Hasil Analisa Destinasi Wisata Menggunakan Metode Fuzzy Tahani</h4>
 			<?php
 			for ($i = 0; $i < count($id_alternatif); $i++) {
@@ -312,26 +312,7 @@ include("koneksi.php");
 				}
 			}
 			?>
-			<table class="table table-hover" border="0">
-				<tr class="table-dark">
-					<td>No</td>
-					<td>Nama Wisata</td>
-					<td>Nilai Fire Strength</td>
-				</tr>
-				<?php
-				for ($i = 0; $i < count($id_alternatif); $i++) {
-				?>
-					<tr>
-						<td><?php echo ($i + 1); ?></td>
-						<td><?php echo $nama_alternatif[$i]; ?></td>
-						<td><?php echo number_format ($fire_strength[$i],2); ?></td>
-					</tr>
-				<?php
-				}
-				?>
-			</table>
 		</div>
-
 		<?php
 		if ($fire_strength[0] > 0) {
 		?>

@@ -66,22 +66,16 @@ a:active {
           <td width="261" bgcolor="#FFFFFF" align="center">Longitude</td>
           <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-gis.php"><button class="btn btn-success btn-sm">Tambah</button></a></td>
         </tr>
-        <?php
-      $page = (isset($_GET['page']))? $_GET['page'] : 1;
-      $limit = 10; 
-      $limit_start = ($page - 1) * $limit;
-      $no = $limit_start + 1;
- 
-      $query = "SELECT * FROM wisata ORDER BY id_wisata ASC LIMIT $limit_start, $limit";
-      $hal = $db->prepare($query);
-      $hal->execute();
-      $res1 = $hal->get_result();
-      while ($datagis = $res1->fetch_assoc()) {
-    ?>
+        <<?php
+			  $querygis = mysqli_query($db, "SELECT * FROM wisata ORDER BY id_wisata");
+        while ($datagis = mysqli_fetch_array($querygis)) {
+				$queryalternatif = mysqli_query($db, "SELECT * FROM alternatif WHERE id_alternatif = '$datagis[id_alternatif]'");
+				$dataalternatif = mysqli_fetch_array($queryalternatif);
+		?>
         <tr>
         
           <td bgcolor="#FFFFFF" align="center"><?php echo $datagis['id_wisata']; ?></td>
-          <td bgcolor="#FFFFFF"><?php echo $datagis['nama_wisata']; ?></td>
+          <td bgcolor="#FFFFFF"><?php echo $dataalternatif['nama_alternatif']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $datagis['website']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $datagis['alamat']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $datagis['latitude']; ?></td>
@@ -90,52 +84,10 @@ a:active {
           <a href="del-gis.php?id_wisata=<?php echo $datagis['id_wisata']; ?>"><button class="btn btn-danger btn-sm" type="submit" onclick="alert('Hapus');">Hapus</button></a></td>
         </tr>
         <?php
-			}
+        }
 		?>
       </table>
       <br />
-      <?php
-  $query_jumlah = "SELECT count(*) AS jumlah FROM wisata";
-  $hal = $db->prepare($query_jumlah);
-  $hal->execute();
-  $res1 = $hal->get_result();
-  $datagis = $res1->fetch_assoc();
-  $total_records = $datagis['jumlah'];
-?>
-<p>Total baris : <?php echo $total_records; ?></p>
-<nav class="mb-5">
-  <ul class="pagination justify-content-end">
-    <?php
-      $jumlah_page = ceil($total_records / $limit);
-      $jumlah_number = 1; //jumlah halaman ke kanan dan kiri dari halaman yang aktif
-      $start_number = ($page > $jumlah_number)? $page - $jumlah_number : 1;
-      $end_number = ($page < ($jumlah_page - $jumlah_number))? $page + $jumlah_number : $jumlah_page;
-      
-      if($page == 1){
-        echo '<li class="page-item disabled"><a class="page-link" href="#">First</a></li>';
-        echo '<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>';
-      } else {
-        $link_prev = ($page > 1)? $page - 1 : 1;
-        echo '<li class="page-item"><a class="page-link" href="?page=1">First</a></li>';
-        echo '<li class="page-item"><a class="page-link" href="?page='.$link_prev.'" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
-      }
- 
-      for($i = $start_number; $i <= $end_number; $i++){
-        $link_active = ($page == $i)? ' active' : '';
-        echo '<li class="page-item '.$link_active.'"><a class="page-link" href="?page='.$i.'">'.$i.'</a></li>';
-      }
- 
-      if($page == $jumlah_page){
-        echo '<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a></li>';
-        echo '<li class="page-item disabled"><a class="page-link" href="#">Last</a></li>';
-      } else {
-        $link_next = ($page < $jumlah_page)? $page + 1 : $jumlah_page;
-        echo '<li class="page-item"><a class="page-link" href="?page='.$link_next.'" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
-        echo '<li class="page-item"><a class="page-link" href="?page='.$jumlah_page.'">Last</a></li>';
-      }
-    ?>
-  </ul>
-</nav></td>
   </tr>
   <tr>
   <td bgcolor="#F0F8FF"><table width="100%" border="0" cellspacing="0" cellpadding="0">

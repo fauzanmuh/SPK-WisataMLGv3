@@ -6,7 +6,7 @@
 		exit;
 	}
 	if (isset($_POST['button'])) {
-		mysqli_query($db, "UPDATE wisata SET nama_wisata = '$_POST[nama_wisata]', website = '$_POST[website]', alamat = '$_POST[alamat]', latitude = '$_POST[latitude]', 
+		mysqli_query($db, "UPDATE wisata SET id_alternatif = '$_POST[id_alternatif]', website = '$_POST[website]', alamat = '$_POST[alamat]', latitude = '$_POST[latitude]', 
         longitude = '$_POST[longitude]' WHERE id_wisata = '$_POST[id_wisata]'");
 		header("location:wisatagis.php");
 	}
@@ -71,8 +71,19 @@ a:active {
             <td bgcolor="#FFFFFF"><input type="text" name="id_wisata" id="id_wisata" readonly value="<?php echo $datagis['id_wisata']; ?>" /></td>
           </tr>
           <tr>
-            <td width="160" bgcolor="#FFFFFF">Nama Wisata</td>
-            <td width="267" bgcolor="#FFFFFF"><input type="text" name="nama_wisata" id="nama_wisata" value="<?php echo $datagis['nama_wisata']; ?>" /></td>
+            <td width="141" bgcolor="#FFFFFF"> Alternatif</td>
+            <td width="236" bgcolor="#FFFFFF"><select name="id_alternatif" id="id_alternatif">
+              <option value=""></option>
+              <?php
+					$queryalternatif = mysqli_query($db, "SELECT * FROM alternatif ORDER BY id_alternatif");
+					while ($dataalternatif = mysqli_fetch_array($queryalternatif)) {
+				?>
+              <option value="<?php echo $dataalternatif['id_alternatif']; ?>" <?php if ($datagis['id_alternatif'] == $dataalternatif['id_alternatif']) { echo " selected"; } ?>>
+              <?php echo $dataalternatif['nama_alternatif']; ?></option>
+              <?php
+					}
+				?>
+            </select></td>
           </tr>
           <tr>
             <td width="160" bgcolor="#FFFFFF">Website</td>
