@@ -9,7 +9,7 @@ $alamat = "";
 $lat = "";
 $long = "";
 foreach($obj->results as $item){
-  $titles.=$item->id_alternatif;
+  $titles.=$item->nama_wisata;
   $web.=$item->website;
   $alamat.=$item->alamat;
   $lat.=$item->latitude;
@@ -110,7 +110,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
   <div class="container" style="padding-top: 120px;">
       <div class="row">
-        
         <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
           <div class="panel panel-info panel-dashboard">
             <div class="panel-heading centered">
@@ -132,7 +131,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                </tr>
                <tr>
                <td>Website</td>
-                 <td><h5><a href="http://<?php echo $web ?>"><?php echo $web ?></a></h5></td>
+                 <td><h5><a href="<?php echo $web ?>"><?php echo $web ?></a></h5></td>
                </tr>
              </table>
             </div>
@@ -175,7 +174,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <script src="js/script.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="js/datatable-bootstrap.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
 </html>

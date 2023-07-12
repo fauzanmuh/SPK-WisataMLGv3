@@ -61,6 +61,8 @@ a:active {
           <td width="115" bgcolor="#FFFFFF" align="center">ID Wisata</td>
           <td width="202" bgcolor="#FFFFFF" align="center">Nama Wisata</td>
           <td width="261" bgcolor="#FFFFFF" align="center">Deskripsi</td>
+          <td width="261" bgcolor="#FFFFFF" align="center">Gambar</td>
+          <td width="261" bgcolor="#FFFFFF" align="center">Website</td>
           <td width="77" bgcolor="#FFFFFF" align="center"><a href="add-alternatif.php"><button class="btn btn-success btn-sm">Tambah</button></a></td>
         </tr>
         <?php
@@ -79,6 +81,8 @@ a:active {
           <td bgcolor="#FFFFFF" align="center"><?php echo $row['id_alternatif']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $row['nama_alternatif']; ?></td>
           <td bgcolor="#FFFFFF"><?php echo $row['deskripsi']; ?></td>
+          <td bgcolor="#FFFFFF" style="text-align: center;"><img src="assets/wisata/<?php echo $row['gambar_wisata']; ?>" style="width: 120px;"></td>
+          <td bgcolor="#FFFFFF"><?php echo $row['website']; ?></td>
           <td bgcolor="#FFFFFF"><a href="edit-alternatif.php?id_alternatif=<?php echo $row['id_alternatif']; ?>"><button class="btn btn-primary btn-sm">Edit</button></a>
           <a href="del-alternatif.php?id_alternatif=<?php echo $row['id_alternatif']; ?>"><button class="btn btn-danger btn-sm" type="submit" onclick="alert('Apakah Anda Yakin?');">Hapus</button></a></td>
         </tr>
