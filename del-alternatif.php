@@ -6,5 +6,5 @@
 		exit;
 	}
 	mysqli_query($db, "DELETE FROM alternatif WHERE id_alternatif = '$_GET[id_alternatif]'");
-	header("location:alternatif.php");
+	echo "<script>alert('data berhasil dihapus.');window.location='alternatif.php';</script>";
 ?>

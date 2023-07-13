@@ -6,5 +6,5 @@
 		exit;
 	}
 	mysqli_query($db, "DELETE FROM nilai_fuzzy WHERE id_nilai_fuzzy = '$_GET[id_nilai_fuzzy]'");
-	header("location:nilai-fuzzy.php");
+	echo "<script>alert('Data berhasil dihapus.');window.location='nilai-fuzzy.php';</script>";
 ?>

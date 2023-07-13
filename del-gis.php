@@ -7,5 +7,5 @@
 	}
 	mysqli_query($db, "DELETE FROM wisata WHERE id_wisata = '$_GET[id_wisata]'");
 	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
-	header("location:wisatagis.php");
+	echo "<script>alert('data berhasil dihapus.');window.location='wisatagis.php';</script>";
 ?>

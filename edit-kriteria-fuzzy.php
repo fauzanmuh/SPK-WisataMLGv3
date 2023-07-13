@@ -5,116 +5,251 @@
 		header("location:login.php?pesan=Belum Login");
 		exit;
   }
-	if (isset($_POST['button'])) {
+	if (isset($_POST['submit'])) {
 		mysqli_query($db, "UPDATE kriteria_fuzzy SET nama_kriteria_fuzzy='$_POST[nama_kriteria_fuzzy]', batas_bawah='$_POST[batas_bawah]', batas_tengah='$_POST[batas_tengah]', 
     batas_atas='$_POST[batas_atas]', nama_bawah='$_POST[nama_bawah]', nama_tengah='$_POST[nama_tengah]', nama_atas='$_POST[nama_atas]' WHERE id_kriteria_fuzzy='$_POST[id_kriteria_fuzzy]'");
-		header("location:kriteria-fuzzy.php");
+		echo "<script>alert('Data berhasil diedit.');window.location='kriteria-fuzzy.php';</script>";
 	}
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Database SPK Pemilihan Objek Wisata Malang Raya</title>
-<style type="text/css">
-<!--
-body,td,th {
-	font-family: Georgia, Times New Roman, Times, serif;
-	font-size: 13px;
-	color: #008B8B;
-}
-.style1 {
-	color: #556B2F;
-	font-size: 24px;
-}
-a:link {
-	text-decoration: none;
-	color: #333333;
-}
-a:visited {
-	text-decoration: none;
-	color: #333333;
-}
-a:hover {
-	text-decoration: underline;
-	color: #FF0000;
-}
-a:active {
-	text-decoration: none;
-	color: #333333;
-}
-.style2 {font-weight: bold}
--->
-</style></head>
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-<table width="1000" border="0" align="center" cellpadding="7" cellspacing="1" bgcolor="#FFFFF0">
-  <tr>
-    <td height="50" bgcolor="#F0F8FF" align="center"><span class="style1">Database SPK Pemilihan Objek Wisata Malang Raya</span></td>
-  </tr>
-  <tr>
-    <td height="35" bgcolor="#F0F8FF"><span class="style2"><a href="admin.php">Home</a> | <a href="alternatif.php">Wisata</a> | <a href="kriteria-fuzzy.php">Kriteria Fuzzy</a> | 
-    <a href="nilai-fuzzy.php">Nilai Fuzzy</a> | <a href="logout.php">Logout</a></span></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" bgcolor="#F0FFFF"><br />
-      <strong>Edit Data Kriteria Fuzzy</strong><br />
-      <br />
-      <?php
-			$querykriteria = mysqli_query($db, "SELECT * FROM kriteria_fuzzy WHERE id_kriteria_fuzzy = '$_GET[id_kriteria_fuzzy]'");
-			$datakriteria = mysqli_fetch_array($querykriteria);
-		?>
-      <form id="form1" name="form1" method="post" action="">
-        <table width="350" border="0" cellpadding="5" cellspacing="1" bgcolor="#000099">
-          <tr>
-            <td bgcolor="#FFFFFF">ID Kriteria Fuzzy</td>
-            <td bgcolor="#FFFFFF"><input type="text" name="id_kriteria_fuzzy" id="id_kriteria_fuzzy" readonly value="<?php echo $datakriteria['id_kriteria_fuzzy']; ?>" /></td>
-          </tr>
-          <tr>
-            <td width="128" bgcolor="#FFFFFF">Nama Kriteria Fuzzy</td>
-            <td width="249" bgcolor="#FFFFFF"><input type="text" name="nama_kriteria_fuzzy" id="nama_kriteria_fuzzy" value="<?php echo $datakriteria['nama_kriteria_fuzzy']; ?>" /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFFFFF">Batas Bawah</td>
-            <td bgcolor="#FFFFFF"><input type="text" name="batas_bawah" id="batas_bawah" value="<?php echo $datakriteria['batas_bawah']; ?>" /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFFFFF">Batas Tengah</td>
-            <td bgcolor="#FFFFFF"><input type="text" name="batas_tengah" id="batas_tengah" value="<?php echo $datakriteria['batas_tengah']; ?>" /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFFFFF">Batas Atas</td>
-            <td bgcolor="#FFFFFF"><input type="text" name="batas_atas" id="batas_atas" value="<?php echo $datakriteria['batas_atas']; ?>" /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFFFFF">Nama Bawah</td>
-            <td bgcolor="#FFFFFF"><input type="text" name="nama_bawah" id="nama_bawah" value="<?php echo $datakriteria['nama_bawah']; ?>" /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFFFFF">Nama Tengah</td>
-            <td bgcolor="#FFFFFF"><input type="text" name="nama_tengah" id="nama_tengah" value="<?php echo $datakriteria['nama_tengah']; ?>" /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFFFFF">Nama Atas</td>
-            <td bgcolor="#FFFFFF"><input type="text" name="nama_atas" id="nama_atas" value="<?php echo $datakriteria['nama_atas']; ?>" /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFFFFF">&nbsp;</td>
-            <td bgcolor="#FFFFFF"><input type="submit" name="button" id="button" value="Simpan" /></td>
-          </tr>
-        </table>
-        </form>
-      <br />
-    <br /></td>
-  </tr>
-  <tr>
-  <td bgcolor="#F0F8FF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-      <td width="47%" height="35" align="left"><strong>&copy; Muhammad Fauzan</strong></td>
-        <td width="53%" height="35" align="right"><strong> POLINEMA 2023</td>
-      </tr>
-    </table></td>
-  </tr>
-</table>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Database SPK Pemilihan Objek Wisata Malang Raya</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Admin <sup></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="admin.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="alternatif.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Alternatif</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="kriteria-fuzzy.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Kriteria Fuzzy</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="nilai-fuzzy.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Nilai Fuzzy</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="wisatagis.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>GIS</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <img class="img-profile rounded-circle" src="assets/art.jpg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="logout.php" data-toggle="modal"
+                                    data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Tabel Kriteria Fuzzy</h1>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Edit Kriteria</h6>
+                        </div>
+                        <div class="container col-md-6 mt-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="" method="post" role="form">
+                                        <?php
+                                    $querykriteria = mysqli_query($db, "SELECT * FROM kriteria_fuzzy WHERE id_kriteria_fuzzy = '$_GET[id_kriteria_fuzzy]'");
+                                    $datakriteria = mysqli_fetch_array($querykriteria);
+                                  ?>
+                                        <div class="form-group">
+                                            <label>ID Kriteria Fuzzy</label>
+                                            <input type="text" name="id_kriteria_fuzzy" readonly
+                                                value="<?php echo $datakriteria['id_kriteria_fuzzy']; ?>"
+                                                class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Kriteria Fuzzy</label>
+                                            <input type="text" name="nama_kriteria_fuzzy" required=""
+                                                value="<?php echo $datakriteria['nama_kriteria_fuzzy']; ?>"
+                                                class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Batas Bawah</label>
+                                            <input type="text" name="batas_bawah"
+                                                value="<?php echo $datakriteria['batas_bawah']; ?>" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Batas Tengah</label>
+                                            <input type="text" name="batas_tengah"
+                                                value="<?php echo $datakriteria['batas_tengah']; ?>" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Batas Atas</label>
+                                            <input type="text" name="batas_atas"
+                                                value="<?php echo $datakriteria['batas_atas']; ?>" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Bawah</label>
+                                            <input type="text" name="nama_bawah"
+                                                value="<?php echo $datakriteria['nama_bawah']; ?>" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Tengah</label>
+                                            <input type="text" name="nama_tengah"
+                                                value="<?php echo $datakriteria['nama_tengah']; ?>" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Atas</label>
+                                            <input type="text" name="nama_atas"
+                                                value="<?php echo $datakriteria['nama_atas']; ?>" class="form-control">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary" name="submit"
+                                            value="simpan">Simpan</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Muhammad Fauzan 2023</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/datatables-demo.js"></script>
 </body>
+
 </html>

@@ -6,5 +6,5 @@
 		exit;
 	}
 	mysqli_query($db, "DELETE FROM kriteria_fuzzy WHERE id_kriteria_fuzzy = '$_GET[id_kriteria_fuzzy]'");
-	header("location:kriteria-fuzzy.php");
+	echo "<script>alert('Data berhasil dihapus.');window.location='kriteria-fuzzy.php';</script>";
 ?>
